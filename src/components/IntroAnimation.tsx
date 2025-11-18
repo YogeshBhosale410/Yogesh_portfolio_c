@@ -1,0 +1,57 @@
+import React, { useEffect } from 'react';
+
+const IntroAnimation = ({ onComplete }: { onComplete: () => void }) => {
+  useEffect(() => {
+    console.log('IntroAnimation mounted');
+    const timer = setTimeout(() => {
+      console.log('Animation complete');
+      onComplete();
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [onComplete]);
+
+  return (
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
+      backgroundColor: '#000',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 9999,
+      color: '#fff',
+      fontFamily: 'Arial, sans-serif'
+    }}>
+      <div style={{
+        fontSize: '3rem',
+        fontWeight: 'bold',
+        marginBottom: '20px',
+        animation: 'fadeIn 1s ease-in-out'
+      }}>
+        Yogesh Bhosale
+      </div>
+      <div style={{
+        fontSize: '1.5rem',
+        color: '#00d4ff',
+        animation: 'fadeIn 1s ease-in-out 0.5s forwards',
+        opacity: 0
+      }}>
+        Building Digital Experiences
+      </div>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+        `
+      }} />
+    </div>
+  );
+};
+
+export default IntroAnimation;
