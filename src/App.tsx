@@ -22,13 +22,13 @@ function App() {
           <h1>Yogesh Bhosale Portfolio</h1>
           <nav>
             <ul className="navbar">
-              <li><Link to="/">Home</Link></li>
+              <li><Link to="/" className="home-link">Home</Link></li>
             </ul>
           </nav>
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home key="home" />} />
             <Route path="/about" element={<About />} />
             <Route path="/about-morphing" element={<AboutMorphing />} />
             <Route path="/education" element={<Education />} />

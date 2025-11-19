@@ -36,7 +36,7 @@ const WorkspaceContainer = styled(motion.div)`
   @media (max-width: 768px) {
     overflow: visible;
     min-height: auto;
-    padding-top: 5px;
+    padding-top: 1px;
   }
 `;
 
@@ -57,13 +57,13 @@ const IntroPanel = styled(motion.div)`
     top: auto;
     left: auto;
     max-width: 90%;
-    margin: 10px auto;
+    margin: 2px auto;
     padding: 1rem;
   }
   
   @media (max-width: 480px) {
     padding: 0.8rem;
-    margin: 5px auto;
+    margin: 1px auto;
   }
 `;
 
@@ -189,11 +189,11 @@ const ObjectIcon = styled.div<{ color: string }>`
   filter: drop-shadow(0 0 10px ${props => props.color}44);
   
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   @media (max-width: 480px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -205,11 +205,11 @@ const ObjectLabel = styled.div`
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   
   @media (max-width: 480px) {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 `;
 
@@ -229,11 +229,19 @@ const Home: React.FC = () => {
   };
   
   // Update positions on window resize
+  const [, setWindowSize] = React.useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  
   React.useEffect(() => {
     const handleResize = () => {
-      // Force re-render by updating state instead of dispatching resize event
+      // Update window size state to trigger re-render
       // This prevents infinite recursion as warned in memory about self-triggering event loops
-      window.location.reload();
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     };
     
     window.addEventListener('resize', handleResize);
@@ -263,11 +271,12 @@ const Home: React.FC = () => {
         color="#00d4ff"
         drag
         dragMomentum={false}
-        initial={{ x: window.innerWidth < 768 ? 50 : 190, y: window.innerWidth < 768 ? 150 : 280, scale: 0, opacity: 0 }}
+        dragElastic={0.5}
+        initial={{ x: window.innerWidth < 480 ? 20 : window.innerWidth < 768 ? 50 : 190, y: window.innerWidth < 480 ? 60 : window.innerWidth < 768 ? 100 : 280, scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 150, damping: 25 }}
         whileHover={{ scale: 1.1, rotateY: 15, rotateX: 5 }}
-        whileDrag={{ scale: 1.2, rotateY: 20, rotateX: 10, zIndex: 1000 }}
+        whileDrag={{ scale: window.innerWidth < 768 ? 1.1 : 1.2, rotateY: window.innerWidth < 768 ? 10 : 20, rotateX: window.innerWidth < 768 ? 5 : 10, zIndex: 1000 }}
         onClick={() => handleObjectClick('/about')}
       >
         <ObjectIcon color="#00d4ff">
@@ -281,11 +290,12 @@ const Home: React.FC = () => {
         color="#ff6b6b"
         drag
         dragMomentum={false}
-        initial={{ x: window.innerWidth < 768 ? 50 : 400, y: window.innerWidth < 768 ? 250 : 200, scale: 0, opacity: 0 }}
+        dragElastic={0.5}
+        initial={{ x: window.innerWidth < 480 ? 20 : window.innerWidth < 768 ? 50 : 400, y: window.innerWidth < 480 ? 120 : window.innerWidth < 768 ? 160 : 200, scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 150, damping: 25 }}
         whileHover={{ scale: 1.1, rotateY: 15, rotateX: 5 }}
-        whileDrag={{ scale: 1.2, rotateY: 20, rotateX: 10, zIndex: 1000 }}
+        whileDrag={{ scale: window.innerWidth < 768 ? 1.1 : 1.2, rotateY: window.innerWidth < 768 ? 10 : 20, rotateX: window.innerWidth < 768 ? 5 : 10, zIndex: 1000 }}
         onClick={() => handleObjectClick('/projects')}
       >
         <ObjectIcon color="#ff6b6b">
@@ -299,11 +309,12 @@ const Home: React.FC = () => {
         color="#4ecdc4"
         drag
         dragMomentum={false}
-        initial={{ x: window.innerWidth < 768 ? 50 : 600, y: window.innerWidth < 768 ? 350 : 150, scale: 0, opacity: 0 }}
+        dragElastic={0.5}
+        initial={{ x: window.innerWidth < 480 ? 20 : window.innerWidth < 768 ? 50 : 600, y: window.innerWidth < 480 ? 180 : window.innerWidth < 768 ? 220 : 150, scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.8, type: "spring", stiffness: 150, damping: 25 }}
         whileHover={{ scale: 1.1, rotateY: 15, rotateX: 5 }}
-        whileDrag={{ scale: 1.2, rotateY: 20, rotateX: 10, zIndex: 1000 }}
+        whileDrag={{ scale: window.innerWidth < 768 ? 1.1 : 1.2, rotateY: window.innerWidth < 768 ? 10 : 20, rotateX: window.innerWidth < 768 ? 5 : 10, zIndex: 1000 }}
         onClick={() => handleObjectClick('/skills')}
       >
         <ObjectIcon color="#4ecdc4">
@@ -317,11 +328,12 @@ const Home: React.FC = () => {
         color="#45b7d1"
         drag
         dragMomentum={false}
-        initial={{ x: window.innerWidth < 768 ? 50 : 300, y: window.innerWidth < 768 ? 450 : 350, scale: 0, opacity: 0 }}
+        dragElastic={0.5}
+        initial={{ x: window.innerWidth < 480 ? 20 : window.innerWidth < 768 ? 50 : 300, y: window.innerWidth < 480 ? 240 : window.innerWidth < 768 ? 280 : 350, scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8, type: "spring", stiffness: 150, damping: 25 }}
         whileHover={{ scale: 1.1, rotateY: 15, rotateX: 5 }}
-        whileDrag={{ scale: 1.2, rotateY: 20, rotateX: 10, zIndex: 1000 }}
+        whileDrag={{ scale: window.innerWidth < 768 ? 1.1 : 1.2, rotateY: window.innerWidth < 768 ? 10 : 20, rotateX: window.innerWidth < 768 ? 5 : 10, zIndex: 1000 }}
         onClick={() => handleObjectClick('/experience')}
       >
         <ObjectIcon color="#45b7d1">
@@ -335,11 +347,12 @@ const Home: React.FC = () => {
         color="#96ceb4"
         drag
         dragMomentum={false}
-        initial={{ x: window.innerWidth < 768 ? 50 : 500, y: window.innerWidth < 768 ? 550 : 400, scale: 0, opacity: 0 }}
+        dragElastic={0.5}
+        initial={{ x: window.innerWidth < 480 ? 20 : window.innerWidth < 768 ? 50 : 500, y: window.innerWidth < 480 ? 300 : window.innerWidth < 768 ? 340 : 400, scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8, type: "spring", stiffness: 150, damping: 25 }}
         whileHover={{ scale: 1.1, rotateY: 15, rotateX: 5 }}
-        whileDrag={{ scale: 1.2, rotateY: 20, rotateX: 10, zIndex: 1000 }}
+        whileDrag={{ scale: window.innerWidth < 768 ? 1.1 : 1.2, rotateY: window.innerWidth < 768 ? 10 : 20, rotateX: window.innerWidth < 768 ? 5 : 10, zIndex: 1000 }}
         onClick={() => handleObjectClick('/education')}
       >
         <ObjectIcon color="#96ceb4">
@@ -353,11 +366,12 @@ const Home: React.FC = () => {
         color="#ffeaa7"
         drag
         dragMomentum={false}
-        initial={{ x: window.innerWidth < 768 ? 50 : 700, y: window.innerWidth < 768 ? 650 : 300, scale: 0, opacity: 0 }}
+        dragElastic={0.5}
+        initial={{ x: window.innerWidth < 480 ? 20 : window.innerWidth < 768 ? 50 : 700, y: window.innerWidth < 480 ? 360 : window.innerWidth < 768 ? 400 : 300, scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.8, duration: 0.8, type: "spring", stiffness: 150, damping: 25 }}
         whileHover={{ scale: 1.1, rotateY: 15, rotateX: 5 }}
-        whileDrag={{ scale: 1.2, rotateY: 20, rotateX: 10, zIndex: 1000 }}
+        whileDrag={{ scale: window.innerWidth < 768 ? 1.1 : 1.2, rotateY: window.innerWidth < 768 ? 10 : 20, rotateX: window.innerWidth < 768 ? 5 : 10, zIndex: 1000 }}
         onClick={() => handleObjectClick('/contact')}
       >
         <ObjectIcon color="#ffeaa7">
@@ -370,4 +384,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default React.memo(Home);

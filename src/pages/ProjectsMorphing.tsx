@@ -97,8 +97,13 @@ const Title = styled(motion.h1)`
   letter-spacing: 4px;
   
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 2px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
   }
 `;
 
@@ -455,7 +460,7 @@ const projectsData: ProjectData[] = [
   },
   {
     id: 'grievance',
-    title: 'College Grievance App',
+    title: 'College Grievance Website',
     description: 'MERN stack application for managing student grievances with user authentication, complaint tracking, admin dashboard, and automated notifications.',
     tech: ['MongoDB', 'Express.js', 'React', 'Node.js'],
     github: 'https://github.com/YogeshBhosale410',

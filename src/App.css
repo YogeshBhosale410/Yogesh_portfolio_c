@@ -12,6 +12,10 @@ body {
 main {
   min-height: 80vh;
   padding: 1rem 0;
+  
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
 }
 
 .App {
@@ -76,6 +80,27 @@ main {
 .navbar li a:hover, .navbar li a.active {
   background: #00d4ff;
   color: #1a1a2e;
+}
+
+.home-link {
+  background: #00d4ff;
+  color: #1a1a2e;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.8); }
+  100% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.5); }
+}
+
+@media (max-width: 768px) {
+  .home-link {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.3rem;
+  }
 }
 
 .section-card {

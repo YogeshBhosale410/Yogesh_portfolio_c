@@ -262,7 +262,7 @@ const cardData = [
     id: 'core',
     icon: '🔧',
     title: 'CORE_FUNCTIONS',
-    content: 'BCA Graduate with a strong foundation in Python (intermediate) and basic knowledge of the MERN stack. Passionate about IoT, AI, and full-stack development, with hands-on experience in real-world projects. Currently deepening expertise in MERN stack while leveraging Python for automation and AI-driven solutions.',
+    content: 'BCA Graduate with a strong foundation in Python and growing skills in the MERN stack. Passionate about AI, IoT, and full-stack development, with hands-on experience in real-world projects. Currently focusing on AI-driven MERN development while using Python for automation and smart solution building..',
     details: 'SYSTEM SPECIFICATIONS:\n\n• Education: Bachelor of Computer Applications\n• CGPA: 9.13/10 (Excellent Performance)\n• Core Competencies: IoT Development, Web Applications\n• Current Status: Active Internships\n• Learning Mode: Continuous Upgrade\n\nSystem optimized for innovation!'
   },
   {
@@ -283,7 +283,7 @@ const cardData = [
     id: 'status',
     icon: '🚀',
     title: 'CURRENT_STATUS',
-    content: 'Currently working as an R&D Intern at Elena Geo Pvt. Limited, contributing to real-world projects through research, development, and prototyping of innovative solutions. Always learning new technologies, watching tech videos, and listening to music.',
+    content: 'CCurrently working as an R&D Embedded Intern at Elena Geo Pvt. Ltd., contributing to real-world projects through research, development, and prototyping of innovative embedded solutions. I consistently learn new technologies, explore tech content, and stay updated while enjoying music during my free time..',
     details: 'SYSTEM STATUS REPORT:\n\n💼 ACTIVE INTERNSHIPS:\n• INFOKSHETRA TECHNOLOGY\n  └─ College Grievance Management System\n  └─ MERN Stack Implementation\n  └─ User Authentication & Security\n\n• MAGNUM INFORMATION DRIVEN\n  └─ SMART AGROSENSE IoT Project\n  └─ ESP32 & LoRa Integration\n  └─ Weather API & Automation\n\n📚 CONTINUOUS LEARNING:\n• New Technology Exploration\n• Tech Video Consumption\n• Music Streaming Active\n• Skill Enhancement Mode\n\n⚡ SYSTEM UPTIME: 24/7\nStatus: Fully Operational!'
   }
 ];

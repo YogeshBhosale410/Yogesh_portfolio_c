@@ -8,12 +8,18 @@ const BackgroundContainer = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
+  min-height: 100%;
   overflow: hidden;
   z-index: -1;
   background: transparent; /* remove dark gradient to avoid black background */
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
+  
+  @media (max-width: 768px) {
+    min-height: 100vh;
+    height: auto;
+  }
 `;
 
 const FloatingParticle = styled(motion.div)<{ size: number; color: string }>`

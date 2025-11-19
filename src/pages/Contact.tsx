@@ -26,6 +26,10 @@ const Container = styled(motion.div)`
   transform: translateZ(0);
   backface-visibility: hidden;
   
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -50,6 +54,15 @@ const Title = styled(motion.h1)`
   text-align: center;
   text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
   font-family: 'Courier New', monospace;
+  padding: 0 1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const Subtitle = styled(motion.p)`
@@ -66,6 +79,10 @@ const ContentWrapper = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 0 0.5rem;
+  }
 `;
 
 const ContactInfo = styled(motion.div)`
@@ -78,6 +95,14 @@ const ContactInfo = styled(motion.div)`
   overflow: hidden;
   will-change: transform;
   transform: translateZ(0);
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
 `;
 
 const ContactForm = styled(motion.form)`
@@ -98,6 +123,14 @@ const SectionTitle = styled.h3`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const ContactItem = styled(motion.div)`
@@ -112,6 +145,17 @@ const ContactItem = styled(motion.div)`
   cursor: pointer;
   transition: all 0.3s ease;
   
+  @media (max-width: 768px) {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.6rem;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  
   &:hover {
     background: rgba(0, 212, 255, 0.1);
     border-color: rgba(0, 212, 255, 0.4);
@@ -122,6 +166,14 @@ const ContactItem = styled(motion.div)`
 const ContactIcon = styled.div`
   font-size: 1.5rem;
   color: #00d4ff;
+  
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const ContactDetails = styled.div`
@@ -203,6 +255,16 @@ const SocialLinks = styled.div`
   gap: 1rem;
   margin-top: 2rem;
   justify-content: center;
+  
+  @media (max-width: 768px) {
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
 `;
 
 const SocialLink = styled(motion.a)`
@@ -218,6 +280,18 @@ const SocialLink = styled(motion.a)`
   font-size: 1.5rem;
   text-decoration: none;
   transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
   
   &:hover {
     background: rgba(0, 212, 255, 0.2);

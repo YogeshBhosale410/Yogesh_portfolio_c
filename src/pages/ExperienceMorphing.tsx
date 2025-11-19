@@ -299,7 +299,7 @@ const experienceData: ExperienceData[] = [
     title: 'Full Stack Development Intern',
     company: 'INFOKSHETRA TECHNOLOGY',
     duration: 'Feb 2025 - Mar 2025',
-    description: 'Currently developing College Grievance App with focus on user authentication and database management.',
+    description: 'Developed a College Grievance Management website with secure user authentication and database-driven complaint handling.',
     achievements: [
       'Developing college grievance management system',
       'Implementing user authentication and secure database handling',
@@ -316,7 +316,7 @@ const experienceData: ExperienceData[] = [
     title: 'IoT Developer Intern',
     company: 'MAGNUM INFORMATION DRIVEN',
     duration: 'Feb 2025 - Apr 2025',
-    description: 'Developing SMART AGROSENSE: LoRa-Based Smart Irrigation and Remote Water Pump Control System.',
+    description: 'Developed a LoRa-based smart irrigation system with remote water pump control..',
     achievements: [
       'Built IoT-based smart irrigation system using ESP32',
       'Implemented LoRa-based remote pump control',
