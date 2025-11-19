@@ -46,8 +46,13 @@ const Title = styled(motion.h1)`
   letter-spacing: 4px;
   
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 2px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
   }
 `;
 

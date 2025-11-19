@@ -262,7 +262,7 @@ const Home: React.FC = () => {
         transition={{ delay: 0.2, duration: 1.0, type: "spring", stiffness: 120, damping: 30 }}
       >
         <Title>YOGESH BHOSALE</Title>
-        <Subtitle>BCA Graduate | IoT Enthusiast | Embedded Systems | MERN Stack Developer Using AI</Subtitle>
+        <Subtitle>BCA Graduate | Python | IoT Enthusiast | Embedded Systems | MERN Stack Developer Using AI</Subtitle>
         <Instruction>Drag the objects around to explore my portfolio! 🎵 Loading music...</Instruction>
       </IntroPanel>
 
