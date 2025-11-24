@@ -283,8 +283,8 @@ const cardData = [
     id: 'status',
     icon: '🚀',
     title: 'CURRENT_STATUS',
-    content: 'CCurrently working as an R&D Embedded Intern at Elena Geo Pvt. Ltd., contributing to real-world projects through research, development, and prototyping of innovative embedded solutions. I consistently learn new technologies, explore tech content, and stay updated while enjoying music during my free time..',
-    details: 'SYSTEM STATUS REPORT:\n\n💼 ACTIVE INTERNSHIPS:\n• INFOKSHETRA TECHNOLOGY\n  └─ College Grievance Management System\n  └─ MERN Stack Implementation\n  └─ User Authentication & Security\n\n• MAGNUM INFORMATION DRIVEN\n  └─ SMART AGROSENSE IoT Project\n  └─ ESP32 & LoRa Integration\n  └─ Weather API & Automation\n\n📚 CONTINUOUS LEARNING:\n• New Technology Exploration\n• Tech Video Consumption\n• Music Streaming Active\n• Skill Enhancement Mode\n\n⚡ SYSTEM UPTIME: 24/7\nStatus: Fully Operational!'
+    content: 'Currently working as an R&D Embedded Intern at Elena Geo Pvt. Ltd., contributing to real-world projects through research, development, and prototyping of innovative embedded solutions. I consistently learn new technologies, explore tech content, and stay updated while enjoying music during my free time..',
+    details: 'SYSTEM STATUS REPORT:\n\n💼 ACTIVE INTERNSHIPS:\n• ELENA GEO PVT. LTD.\n  └─ R&D Embedded Intern\n  └─ Research & Development Projects\n  └─ Prototyping Innovative Solutions\n\n📚 CONTINUOUS LEARNING:\n• New Technology Exploration\n• Tech Video Consumption\n• Music Streaming Active\n• Skill Enhancement Mode\n\n⚡ SYSTEM UPTIME: 24/7\nStatus: Fully Operational!'
   }
 ];
 
