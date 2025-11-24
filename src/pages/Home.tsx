@@ -311,7 +311,7 @@ const Home: React.FC = () => {
       >
         <Title>YOGESH BHOSALE</Title>
         <Subtitle>BCA Graduate | Python | IoT Enthusiast | Embedded Systems | MERN Stack Developer Using AI</Subtitle>
-        <Instruction>Drag the objects around to explore my portfolio! 🎵 Loading music...</Instruction>
+        <Instruction>Drag the objects around to explore my portfolio!</Instruction>
         <DraggableHint>⬇️ Drag the objects below to navigate ⬇️</DraggableHint>
         <SocialLinks>
           <SocialLink 
