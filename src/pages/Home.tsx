@@ -134,7 +134,55 @@ const DraggableHint = styled.p`
   }
 `;
 
+const SocialLinks = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  
+  @media (max-width: 768px) {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+`;
 
+const SocialLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 50%;
+  color: #00d4ff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  &:hover {
+    background: rgba(0, 212, 255, 0.2);
+    border-color: #00d4ff;
+    transform: translateY(-3px);
+  }
+`;
 
 const DraggableObject = styled(motion.div)<{ color: string }>`
   position: absolute;
@@ -264,6 +312,25 @@ const Home: React.FC = () => {
         <Title>YOGESH BHOSALE</Title>
         <Subtitle>BCA Graduate | Python | IoT Enthusiast | Embedded Systems | MERN Stack Developer Using AI</Subtitle>
         <Instruction>Drag the objects around to explore my portfolio! 🎵 Loading music...</Instruction>
+        <DraggableHint>⬇️ Drag the objects below to navigate ⬇️</DraggableHint>
+        <SocialLinks>
+          <SocialLink 
+            href="https://github.com/YogeshBhosale410" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            title="GitHub"
+          >
+            🐙
+          </SocialLink>
+          <SocialLink 
+            href="https://www.linkedin.com/in/yogesh-71391231a" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            title="LinkedIn"
+          >
+            💼
+          </SocialLink>
+        </SocialLinks>
       </IntroPanel>
 
       {/* About Me */}
